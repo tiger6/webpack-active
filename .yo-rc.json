@@ -1,0 +1,104 @@
+{
+  "*": {
+    "configuration": {
+      "config": {
+        "webpackOptions": {
+          "module": {
+            "rules": [
+              {
+                "test": "/\\.js$/",
+                "exclude": "/node_modules/",
+                "loader": "'babel-loader'",
+                "options": {
+                  "presets": [
+                    "'env'"
+                  ]
+                }
+              },
+              {
+                "test": "/\\.(scss|css)$/",
+                "use": "ExtractTextPlugin.extract({ \n\t\t\t\t\t\t\t\tuse: [{\n\t\t\t\t\t\t\t\t\tloader: \"css-loader\",\n\t\t\t\t\t\t\t\t\toptions: {\n\t\t\t\t\t\t\t\t\t\tsourceMap: true\n\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t}, {\n\t\t\t\t\t\t\t\t\tloader: \"sass-loader\",\n\t\t\t\t\t\t\t\t\toptions: {\n\t\t\t\t\t\t\t\t\t\tsourceMap: true\n\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t}],\n\t\t\t\t\t\t\t\tfallback: \"style-loader\"\n\t\t\t\t\t\t\t })"
+              }
+            ]
+          },
+          "plugins": [
+            "new UglifyJSPlugin()",
+            "new ExtractTextPlugin('style.css')"
+          ],
+          "entry": {
+            "'app": "\"'./src/app'.js\"",
+            "verdor'": "\"'./src/verdor.js\""
+          },
+          "output": {
+            "filename": "'[name].[chunkhash].js'",
+            "chunkFilename": "'[name].[chunkhash].js'",
+            "path": "path.resolve(__dirname, 'dist')"
+          }
+        },
+        "topScope": [
+          "const webpack = require('webpack')",
+          "const path = require('path')",
+          "/*\n * We've enabled UglifyJSPlugin for you! This minifies your app\n * in order to load faster and run less javascript.\n *\n * https://github.com/webpack-contrib/uglifyjs-webpack-plugin\n *\n */",
+          "const UglifyJSPlugin = require('uglifyjs-webpack-plugin');",
+          "\n",
+          "/*\n * We've enabled commonsChunkPlugin for you. This allows your app to\n * load faster and it splits the modules you provided as entries across\n * different bundles!\n *\n * https://webpack.js.org/plugins/commons-chunk-plugin/\n *\n */",
+          "/*\n * We've enabled ExtractTextPlugin for you. This allows your app to\n * use css modules that will be moved into a separate CSS file instead of inside\n * one of your module entries!\n *\n * https://github.com/webpack-contrib/extract-text-webpack-plugin\n *\n */",
+          "const ExtractTextPlugin = require('extract-text-webpack-plugin');",
+          "\n"
+        ],
+        "configName": "prod"
+      }
+    }
+  },
+  "webpackdemo": {
+    "configuration": {
+      "config": {
+        "webpackOptions": {
+          "module": {
+            "rules": [
+              {
+                "test": "/\\.js$/",
+                "exclude": "/node_modules/",
+                "loader": "'babel-loader'",
+                "options": {
+                  "presets": [
+                    "'env'"
+                  ]
+                }
+              },
+              {
+                "test": "/\\.(less|css)$/",
+                "use": "ExtractTextPlugin.extract({ \n\t\t\t\t\t\t\t\tuse: [{\n\t\t\t\t\t\t\t\t\tloader: \"css-loader\",\n\t\t\t\t\t\t\t\t\toptions: {\n\t\t\t\t\t\t\t\t\t\tsourceMap: true\n\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t}, {\n\t\t\t\t\t\t\t\t\tloader: \"less-loader\",\n\t\t\t\t\t\t\t\t\toptions: {\n\t\t\t\t\t\t\t\t\t\tsourceMap: true\n\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t}],\n\t\t\t\t\t\t\t\tfallback: \"style-loader\"\n\t\t\t\t\t\t\t })"
+              }
+            ]
+          },
+          "plugins": [
+            "new UglifyJSPlugin()",
+            "new ExtractTextPlugin('style.css')"
+          ],
+          "entry": {
+            "app": "\"./src/app.js\"",
+            "vendor": "\"./src/vendor.js\""
+          },
+          "output": {
+            "filename": "'[name].[chunkhash].js'",
+            "chunkFilename": "'[name].[chunkhash].js'",
+            "path": "path.resolve(__dirname, 'dist')"
+          }
+        },
+        "topScope": [
+          "const webpack = require('webpack')",
+          "const path = require('path')",
+          "/*\n * We've enabled UglifyJSPlugin for you! This minifies your app\n * in order to load faster and run less javascript.\n *\n * https://github.com/webpack-contrib/uglifyjs-webpack-plugin\n *\n */",
+          "const UglifyJSPlugin = require('uglifyjs-webpack-plugin');",
+          "\n",
+          "/*\n * We've enabled commonsChunkPlugin for you. This allows your app to\n * load faster and it splits the modules you provided as entries across\n * different bundles!\n *\n * https://webpack.js.org/plugins/commons-chunk-plugin/\n *\n */",
+          "/*\n * We've enabled ExtractTextPlugin for you. This allows your app to\n * use css modules that will be moved into a separate CSS file instead of inside\n * one of your module entries!\n *\n * https://github.com/webpack-contrib/extract-text-webpack-plugin\n *\n */",
+          "const ExtractTextPlugin = require('extract-text-webpack-plugin');",
+          "\n"
+        ],
+        "configName": "prod"
+      }
+    }
+  }
+}
