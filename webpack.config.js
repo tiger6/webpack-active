@@ -13,12 +13,12 @@ module.exports = {
     entry: {
         main: './src/index.js',
         vendor: './src/vendor.js',
-        // zepto: 'zepto-webpack'
+        zepto: 'zepto-webpack'
     },
 
     output: {
-        filename: '[name].[hash].js',
-        chunkFilename: '[name].[chunkhash].js',
+        filename: 'js/[name].js',
+        // chunkFilename: '[name].[chunkhash].js',
         path: path.resolve(__dirname, 'dist')
     },
 
@@ -75,11 +75,11 @@ module.exports = {
         new UglifyJSPlugin(),
         new CleanWebpackPlugin(['dist']),
         new HtmlWebpackPlugin({
-            // minify: {
-            //     collapseWhitespace: true
-            // },
+            minify: {
+                collapseWhitespace: true
+            },
             hash: true,
-            title: 'test webpack',
+            title: 'hello webpack',
             template: './src/index.html'
         }),
         new ExtractTextPlugin('css/index.css'),
