@@ -9,6 +9,8 @@ const PurifyCssWebpack = require('purifycss-webpack');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const glob = require('glob');
 const jsonConfig = require('./config/index.json');
+
+
 module.exports = {
     entry: {
         main: './src/index.js',
