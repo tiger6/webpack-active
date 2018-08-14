@@ -14,7 +14,7 @@ npm run dev
 # 打生产包，默认一键zip
 npm run build
 
-#新增活动
+# 新增活动
 直接在src/page目录下面新增活动模块，
 每个模块包含images文件夹,
 index.ejs模板文件,
@@ -24,5 +24,5 @@ index.less css文件
 # 保存支持热更新？
 必须支持热更新
 
-#喜欢欢迎star!!!
+# 喜欢欢迎star!!!
 ```
