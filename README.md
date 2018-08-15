@@ -31,6 +31,7 @@ npm run build
  - 集成常用的less,es6,css3,zepto,weui等，进行快速开发。 
  - 严格区分本地，生产环境。
  - 可利用git,svn进行版本控制，建议git。
+ - 支持vconsole,方便在移动端调式。
  - 支持一键zip打包，版本hash。
 
 > 若对你有帮助，欢迎star!!!
