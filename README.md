@@ -8,7 +8,7 @@
 # 安装依赖
 npm install
 
-# 默认端口号8888 访问地址： localhost:8888
+# 默认端口号8888 访问地址： http://localhost:8888/demo.html
 npm run dev
 
 # 打生产包，默认一键zip
